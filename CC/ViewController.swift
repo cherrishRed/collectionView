@@ -34,9 +34,21 @@ extension ViewController: UICollectionViewDataSource {
         guard let cell = myView.firstCollectionView.dequeueReusableCell(withReuseIdentifier: "CC", for: indexPath) as? CollectionViewCell else {
             return UICollectionViewCell()
         }
-        
         cell.cellLabel.text = String(data[indexPath.item])
+        switch indexPath.section {
+        case 0:
+            cell.backgroundColor = .systemPink
+        case 1:
+            cell.backgroundColor = .systemGray
+        default:
+            cell.backgroundColor = .systemIndigo
+        }
+        
         return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 3
     }
 }
 
