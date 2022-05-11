@@ -31,9 +31,9 @@ class CollectionViewCell: UICollectionViewCell {
         backgroundColor = .systemIndigo
         addSubview(cellLabel)
         
-        cellLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         cellLabel.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         cellLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        cellLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         cellLabel.textAlignment = .center
     }
 }
