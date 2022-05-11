@@ -54,5 +54,19 @@ class View: UIView {
             self.firstCollectionView.topAnchor.constraint(equalTo: segment.bottomAnchor),
             self.firstCollectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
+        
+        segment.addTarget(self, action: #selector(switchSegment(segmentControll:)), for: .valueChanged)
+        
+    }
+    
+    @objc func switchSegment(segmentControll: UISegmentedControl) {
+        switch segmentControll.selectedSegmentIndex {
+        case 0:
+            print("haha")
+        case 1:
+            print("leelee")
+        default:
+            print("없음")
+        }
     }
 }
